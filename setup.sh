@@ -17,3 +17,6 @@ sudo apt install python3.8 -y
 
 # download and save configs
 echo "*** Download Configs ***"
+
+# .vimrc
+wget https://raw.githubusercontent.com/Luca-Mueller/LinuxSetup/9b400e69ec68a0b7a2c5060008b690e2a048eed0/.vimrc
