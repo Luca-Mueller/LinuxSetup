@@ -2,11 +2,11 @@
 
 echo "*** Begin Setup ***"
 
+echo "*** Update ***"
+sudo apt update && sudo apt upgrade
 
 # install important packages
 echo "*** Install Packages ***"
-
-sudo apt update && sudo apt upgrade
 
 sudo apt install wget -y
 sudo apt install curl -y
