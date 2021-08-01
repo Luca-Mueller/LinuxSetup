@@ -17,7 +17,6 @@ set shiftwidth=4
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-# Plugged install
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

@@ -15,14 +15,15 @@ sudo apt install tilix -y
 sudo apt install vim -y
 sudo apt install g++ -y
 sudo apt install python3 -y
+sudo apt install python3-pip -y
 
 
 # download and save configs
-echo "*** Download Configs ***"
+echo "*** Vim Setup ***"
 
 # set up .vimrc
 rm ~/.vimrc
 rm -rf ~/.vim
 mkdir ~/.vim/undodir -p
-mv .vimrc ~/.vimrc
+cp .vimrc ~/.vimrc
 
