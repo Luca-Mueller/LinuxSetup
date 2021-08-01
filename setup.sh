@@ -24,5 +24,5 @@ echo "*** Download Configs ***"
 rm ~/.vimrc
 rm -rf ~/.vim
 mkdir ~/.vim/undodir -p
+mv .vimrc ~/.vimrc
 
-wget https://raw.githubusercontent.com/Luca-Mueller/LinuxSetup/9b400e69ec68a0b7a2c5060008b690e2a048eed0/.vimrc
