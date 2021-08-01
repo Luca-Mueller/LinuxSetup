@@ -23,6 +23,7 @@ Plug 'morhetz/gruvbox'
 Plug 'sickill/vim-monokai'
 Plug 'cocopon/iceberg.vim'
 Plug 'lyuts/vim-rtags'
+Plug 'jremmen/vim-ripgrep'
 Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
 
