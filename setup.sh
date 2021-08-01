@@ -21,12 +21,8 @@ sudo apt install python3 -y
 echo "*** Download Configs ***"
 
 # set up .vimrc
+rm ~/.vimrc
 rm -rf ~/.vim
 mkdir ~/.vim/undodir -p
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 wget https://raw.githubusercontent.com/Luca-Mueller/LinuxSetup/9b400e69ec68a0b7a2c5060008b690e2a048eed0/.vimrc
-
-PlugInstall
