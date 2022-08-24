@@ -22,7 +22,6 @@ function vim-setup() {
 
 function tmux-setup() {
     cp .tmux.conf ~/.tmux.conf
-    sleep 1
     tmux source-file ~/.tmux.conf
 }
 

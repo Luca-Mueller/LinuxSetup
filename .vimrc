@@ -24,11 +24,6 @@ noremap <c-h> <c-w><c-h>
 noremap <c-j> <c-w><c-j>
 noremap <c-k> <c-w><c-k>
 noremap <c-l> <c-w><c-l>
-" == move windows ==
-"noremap <c-H> <c-w><c-H>
-"noremap <c-J> <c-w><c-J>
-"noremap <c-K> <c-w><c-K>
-"noremap <c-L> <c-w><c-L>
 
 " Plugins
 set colorcolumn=80
