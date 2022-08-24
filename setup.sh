@@ -1,29 +1,45 @@
+#!/bin/bash
 # Linux setup script
+# Installs useful packages and config files
 
-echo "*** Begin Setup ***"
-
-echo "*** Update ***"
-sudo apt update && sudo apt upgrade
-
-# install important packages
-echo "*** Install Packages ***"
-
-sudo apt install wget -y
-sudo apt install curl -y
-sudo apt install ssh -y
-sudo apt install tilix -y
-sudo apt install vim -y
-sudo apt install g++ -y
-sudo apt install python3 -y
-sudo apt install python3-pip -y
+BASE_PACKAGES="vim gcc g++ curl wget ssh python3 python3-pip git htop perl \
+                tmux"
 
 
-# download and save configs
-echo "*** Vim Setup ***"
+function install-base-packages() {
+    for PACKAGE in $BASE_PACKAGES 
+    do
+        sudo apt install $PACKAGE -y
+    done 
+}
 
-# set up .vimrc
-rm ~/.vimrc
-rm -rf ~/.vim
-mkdir ~/.vim/undodir -p
-cp .vimrc ~/.vimrc
+function vim-setup() {
+    rm ~/.vimrc
+    rm -rf ~/.vim
+    mkdir ~/.vim/undodir -p
+    cp .vimrc ~/.vimrc
+}
 
+function tmux-setup() {
+    cp .tmux.conf ~/.tmux.conf
+    sleep 1
+    tmux source-file ~/.tmux.conf
+}
+
+echo "[*] Begin Setup"
+
+echo "[*] Update"
+sudo apt update -y && sudo apt upgrade -y
+
+# Install important packages
+echo "[*] Install Packages"
+install-base-packages
+
+# Replace .vimrc and .vim dir
+echo "[*] Vim Setup"
+vim-setup
+
+echo "[*] Tmux Setup"
+tmux-setup
+
+echo "[*] Done"
